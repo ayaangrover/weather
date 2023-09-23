@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Circular Std','Montserrat', serif;
+    color: white;
+  }
+
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust the opacity by changing the last value (0.5 is 50% opacity) */
+    pointer-events: none; /* Allows you to interact with the content behind the overlay */
+    z-index: -1; /* Places the overlay behind the content */
+  }
+  
+  .container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .weather {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 15px 0;
+    font-size: 3.5rem;
+    font-weight: 500;
+  }
+  
+  #location {
+    font-size: 3rem;
+    font-weight: 200;
+  }
+  .desc {
+    font-size: 1.25rem;
+    text-transform: capitalize;
+  }
+  
+  .dot-thingy {
+    background-color: rgba(255, 255, 255, 100);
+    border-radius: 50px;
+    height: 40px;
+    width: 2px;
+    margin: 0 15px;
+  }
+  
+#removed{
+    opacity: 0%;
+    height:0px;
+}
+
+div.c{
+    opacity: 0%;
+}
+
+
+div.info{
+  font-weight: 200;
+  opacity: 0%;
+}
