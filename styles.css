@@ -16,7 +16,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.3); /* Adjust the opacity by changing the last value (0.5 is 50% opacity) */
+    background-color: rgba(0, 0, 0, 0.3); /* Sets the overlay fill to 30% black*/
     pointer-events: none; /* Allows you to interact with the content behind the overlay */
     z-index: -1; /* Places the overlay behind the content */
   }

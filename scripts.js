@@ -56,7 +56,9 @@ window.addEventListener('load', () => {
             "light rain": "url('light-rain.jpg')",
             "heavy rain": "url('heavy-rain.jpg')",
             "rain": "url('rain.jpg')",
-            "light rain": "url('light-rain.jpg')"
+            "few clouds": "url('few-clouds.jpg')",
+            "clouds": "url('some-clouds.jpg')",
+            "many clouds": "url('many-clouds.jpg')",
           };
 
           document.body.style.background = backgroundOptions[backgroundOption] || "black"; // Default to black if the option is not found
