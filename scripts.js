@@ -10,14 +10,15 @@ const sunriseDOM = document.querySelector('.sunrise');
 const sunsetDOM = document.querySelector('.sunset');
 const cityInput = document.querySelector('#city-input'); // Input element for city
 
-const setBackgroundByCity = (city) => {
+const setBackgroundByCity = (desc) => {
   // Make a request to Unsplash API to get a random image related to the city
-  fetch(`https://api.unsplash.com/photos/random?query=${city}&orientation=landscape&client_id=${unsplashAccessKey}`)
+  fetch(`https://api.unsplash.com/photos/random?query=${desc}&orientation=landscape&client_id=zG_X5dFIDe5NGOQy2xVndRnIOwSKOni5uyx71QU_wAY`)
     .then((response) => {
       return response.json();
     })
     .then((data) => {
       const backgroundImageUrl = data.urls.regular;
+      console.log(backgroundImageUrl)
 
       // Set the background image of the body
       document.body.style.backgroundImage = `url(${backgroundImageUrl})`;
@@ -84,8 +85,8 @@ window.addEventListener('load', () => {
   }
 });
 
-// Listen for changes in the city input and update the background accordingly
-cityInput.addEventListener('input', (event) => {
-  const city = event.target.value;
-  setBackgroundByCity(city.toLowerCase());
-});
+// // Listen for changes in the city input and update the background accordingly
+// cityInput.addEventListener('input', (event) => {
+//   const city = event.target.value;
+//   setBackgroundByCity(city.toLowerCase());
+// });
